@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Put, Delete, Body, Param, Query, UseGuards } from '@nestjs/common';
 import { JwtGuard } from './jwt.guard.js';
-import { UserManagementService } from './user-management.service';
+import { UserManagementService } from './user-management.service.js';
 
 export interface CreateUserDto {
   email: string;

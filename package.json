@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node dist/main.js\"",
-    "build": "prisma generate && tsc -p .",
+    "build": "npm install && prisma generate && tsc -p .",
     "start": "prisma migrate deploy && node dist/main.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "railway:deploy": "prisma migrate deploy && npm run build"
+    "railway:deploy": "prisma migrate deploy && npm run build",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@nestjs/common": "^10.4.7",
